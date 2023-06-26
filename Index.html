@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meet Patel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e8a040427.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <div class="navB">
+                <nav>
+
+                    <img src="Images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="header-text">
+                <p>Computer Engineer/Science</p>
+                <h1>Hello There, <br>I'm <span>Meet</span> Patel.</h1>
+            </div>
+
+        </div>
+    </div>
+    <!-- ----------------------------about---------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/meet_test.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As a highly motivated and skilled Computer Science student and Computer Engineer graduate, I have
+                        a strong experience in programming, data structures, algorithms, and computer architecture. I'm
+                        quite good at fixing problems and I love picking up and using new technology. I've created
+                        software applications using a variety of programming languages, including Python, C#, and Java.
+                        I have expertise creating and maintaining a variety of hardware and software systems, including
+                        embedded systems, microcontrollers, and CPUs. I've worked on projects that called for building
+                        and implementing computer systems, developing data analysis techniques, and optimising code.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>C#| C | C++ | CSS | HTML | PHP
+                                | JavaScript | java | Python
+                            </li>
+                            <li><span>Tools</span><br>Visual Studios | Visual Code NetBeans | Android Studios PhpMyAdmin
+                                | GitHub |
+                                Unity
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Trent University</span><br>Bachelor of Science in Computer Science</li>
+                            <li><span>Humber College</span><br>Advanced Diploma in Computer Engineering</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------my work---------------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="header-text-work2">
+                <h1 class="sub-title">My Work</h1>
+            </div>
+
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/unity.jfif" alt="">
+                    <div class="layer">
+                        <h3>Unity Game</h3>
+                        <p>A simple game, player can move around and the objective is to reach the finish line</p>
+                        <a href="https://github.com/meetp752000/SimpleGame"><img src="Images/link.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/parkx.webp" alt="">
+                    <div class="layer">
+                        <h3>ParkX</h3>
+                        <p>A parking lot subsystem, where we used 7-Segment Display, STM32F103C8T6, Buzzer, Ultrasonic Sensor and servo.</p>
+                        <a href="https://github.com/RajkumarPatel28/ParkX"><img src="Images/link.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/PhoneBook.png" alt="">
+                    <div class="layer">
+                        <h3>PhoneBook</h3>
+                        <p>A Phonebook which utilizes a binary tree, stacks, and ArrayList to increase search and storage performance</p>
+                        <a href="https://github.com/meetp752000/PhoneBook"><img src="Images/link.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------------------- contact ------------------------------>
+        <!-- contact section -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> meetp752000@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+1 (647)949-6545</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/meet-patel-576096213/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100004907802149"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" placeholder="Name" name="Name" required>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <textarea placeholder="Message"></textarea>
+                            <button type="submit" class="btn">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright © Meet Patel</p>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link")
+                }
+
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab")
+                }
+
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+
+            }
+
+
+        </script>
+</body>
+
+
+</html>
